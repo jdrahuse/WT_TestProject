@@ -1,0 +1,22 @@
+This API requires Node.js, NPM, and Express framework to be installed. 
+
+When the server is started, immediately atttempts to request the game data from the
+provided WillowTree URL.
+
+The API is broken into two main HTTP rest calls for:
+1. Sending the data for a new game - /newGame
+2. Making a guess on the provided headshots and names - /guess
+
+1. New Game
+This call returns back the game data which can be used for a new game
+based upon the mode. For future game mode expandability, only an addition
+case needs to be added to the switch(mode) statement. The game data is returned
+in a JSON Object. Only the required data (headshot, name, etc) to make the game run is returned.
+
+2. Guess
+When making a guess, either on a headshot or a name, the guess profile
+has an id associated with the guess. This guess checked against the first and last name
+provided from the client for a match with the id.
+
+
+
